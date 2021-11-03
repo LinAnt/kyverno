@@ -19,9 +19,10 @@ spec:
   rules:
   - name: deny-privilege-escalation
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Privilege escalation is disallowed. The fields

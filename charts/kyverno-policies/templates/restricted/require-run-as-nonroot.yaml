@@ -18,9 +18,10 @@ spec:
   rules:
   - name: check-containers
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Running as root is not allowed. The fields spec.securityContext.runAsNonRoot,

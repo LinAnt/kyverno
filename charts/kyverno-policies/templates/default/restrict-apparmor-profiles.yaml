@@ -22,9 +22,10 @@ spec:
   rules:
   - name: app-armor
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Specifying other AppArmor profiles is disallowed. The annotation

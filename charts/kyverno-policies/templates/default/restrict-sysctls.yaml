@@ -22,9 +22,10 @@ spec:
   rules:
   - name: sysctls
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Setting additional sysctls above the allowed type is disallowed.

@@ -20,9 +20,10 @@ spec:
   rules:
   - name: capabilities
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Adding of additional capabilities beyond the default set is not allowed.

@@ -20,9 +20,10 @@ spec:
   rules:
   - name: restricted-vol-gcePersistentDisk
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the gcePersistentDisk type volume is disallowed.
@@ -33,9 +34,10 @@ spec:
           - X(gcePersistentDisk): "null"
   - name: restricted-vol-awsElasticBlockStore
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the awsElasticBlockStore type volume is disallowed.
@@ -46,9 +48,10 @@ spec:
           - X(awsElasticBlockStore): "null"
   - name: restricted-vol-gitRepo
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the gitRepo type volume is disallowed.
@@ -59,9 +62,10 @@ spec:
           - X(gitRepo): "null"
   - name: restricted-vol-nfs
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the nfs type volume is disallowed.
@@ -72,9 +76,10 @@ spec:
           - X(nfs): "null"
   - name: restricted-vol-iscsi
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the iscsi type volume is disallowed.
@@ -85,9 +90,10 @@ spec:
           - X(iscsi): "null"
   - name: restricted-vol-glusterfs
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the glusterfs type volume is disallowed.
@@ -98,9 +104,10 @@ spec:
           - X(glusterfs): "null"
   - name: restricted-vol-rbd
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the rbd type volume is disallowed.
@@ -111,9 +118,10 @@ spec:
           - X(rbd): "null"
   - name: restricted-vol-flexVolume
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the flexVolume type volume is disallowed.
@@ -124,9 +132,10 @@ spec:
           - X(flexVolume): "null"
   - name: restricted-vol-cinder
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the cinder type volume is disallowed.
@@ -137,9 +146,10 @@ spec:
           - X(cinder): "null"
   - name: restricted-vol-cephfs
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the cephfs type volume is disallowed.
@@ -150,9 +160,10 @@ spec:
           - X(cephfs): "null"
   - name: restricted-vol-flocker
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the flocker type volume is disallowed.
@@ -163,9 +174,10 @@ spec:
           - X(flocker): "null"
   - name: restricted-vol-fc
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the fc type volume is disallowed.
@@ -176,9 +188,10 @@ spec:
           - X(fc): "null"
   - name: restricted-vol-azureFile
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the azureFile type volume is disallowed.
@@ -189,9 +202,10 @@ spec:
           - X(azureFile): "null"
   - name: restricted-vol-vsphereVolume
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the vsphereVolume type volume is disallowed.
@@ -202,9 +216,10 @@ spec:
           - X(vsphereVolume): "null"
   - name: restricted-vol-quobyte
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the quobyte type volume is disallowed.
@@ -215,9 +230,10 @@ spec:
           - X(quobyte): "null"
   - name: restricted-vol-azureDisk
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the azureDisk type volume is disallowed.
@@ -228,9 +244,10 @@ spec:
           - X(azureDisk): "null"
   - name: restricted-vol-portworxVolume
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the portworxVolume type volume is disallowed.
@@ -241,9 +258,10 @@ spec:
           - X(portworxVolume): "null"
   - name: restricted-vol-scaleIO
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the scaleIO type volume is disallowed.
@@ -254,9 +272,10 @@ spec:
           - X(scaleIO): "null"
   - name: restricted-vol-storageos
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the storageos type volume is disallowed.
@@ -267,9 +286,10 @@ spec:
           - X(storageos): "null"
   - name: restricted-vol-csi
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of the csi type volume is disallowed.

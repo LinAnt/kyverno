@@ -20,9 +20,10 @@ spec:
   rules:
   - name: seLinux
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Setting custom SELinux options is disallowed. The fields

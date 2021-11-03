@@ -20,9 +20,10 @@ spec:
   rules:
   - name: host-ports
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of host ports is disallowed. The fields spec.containers[*].ports[*].hostPort

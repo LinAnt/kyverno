@@ -21,9 +21,10 @@ spec:
   rules:
   - name: seccomp
     match:
-      resources:
-        kinds:
-        - Pod
+      all:
+        - resources:
+            kinds:
+              - Pod
     validate:
       message: >-
         Use of custom Seccomp profiles is disallowed. The fields
